@@ -1,9 +1,9 @@
-# SEZ Platform
+# TFD E Learning
 
 ## Setup Guide
 Clone the repository
 ```bash
-git clone --recurse-submodules https://gitlab.com/Kimang/sez-platform.git
+git clone --recurse-submodules https://github.com/tfd-ed/tfd-e-learning.git
 ```
 Make sure you have Docker installed.
 ```bash
@@ -15,8 +15,7 @@ Go to
 http://localhost
 ```
 
-### Login Credential:
+### Admin Login Credential:
 
-User: admin
-
-Password: kimang
+User: admin@tfdevs.com
+Password: adminpassword

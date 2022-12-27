@@ -1,0 +1,15 @@
+FROM node:16.18.1-alpine
+
+ENV BASE_URL api
+ENV BASE_URL_PORT 3000
+ENV NODE_ENV local
+WORKDIR /app
+COPY admin/package.json admin/yarn.lock ./
+RUN yarn install
+
+COPY admin .
+RUN yarn build
+
+EXPOSE 4000
+
+CMD [ "yarn", "start" ]

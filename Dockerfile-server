@@ -1,11 +1,11 @@
-FROM node:16.10.0-alpine
+FROM node:16.18.1-alpine
 
-WORKDIR /server
-ENV NODE_ENV development
-COPY sez/package.json sez/yarn.lock ./
+WORKDIR /api
+ENV NODE_ENV dev
+COPY api/package.json api/yarn.lock ./
 RUN yarn install
 
-COPY sez .
+COPY api .
 RUN cp .env.example .env
 RUN yarn build
 
