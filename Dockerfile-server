@@ -1,0 +1,14 @@
+FROM node:16.10.0-alpine
+
+WORKDIR /server
+ENV NODE_ENV development
+COPY sez/package.json sez/yarn.lock ./
+RUN yarn install
+
+COPY sez .
+RUN cp .env.example .env
+RUN yarn build
+
+EXPOSE 3000
+
+CMD [ "yarn", "start:prod" ]
